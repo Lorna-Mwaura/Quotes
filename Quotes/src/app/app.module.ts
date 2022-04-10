@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { QuoteComponent } from './quote/quote.component';
 import { HighlightsDirective } from './highlights.directive';
 import { TimeElaspedPipe } from './time-elasped.pipe';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TimeElaspedPipe } from './time-elasped.pipe';
     HomeComponent,
     QuoteComponent,
     HighlightsDirective,
-    TimeElaspedPipe
+    TimeElaspedPipe,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, SimpleChange } from '@angular/core';
+import { Quote } from '../quoteclass';
 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.scss'],
 })
 export class QuoteComponent implements OnInit {
+  @Input() quote!: Quote;
 
-  constructor() { }
+  @Output() deleteQuoteEvent = new EventEmitter<string>();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  deleteQuote() {
+    this.deleteQuoteEvent.emit(this.quote.id);
   }
 
+  ngOnChanges(changes: SimpleChange) {
+    console.log(changes);
+  }
 }

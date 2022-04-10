@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MediaComponent } from './media/media.component';
 import { HomeComponent } from './home/home.component';
 import { QuoteComponent } from './quote/quote.component';
+import { HighlightsDirective } from './highlights.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QuoteComponent } from './quote/quote.component';
     NavBarComponent,
     MediaComponent,
     HomeComponent,
-    QuoteComponent
+    QuoteComponent,
+    HighlightsDirective
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,15 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive,ElementRef} from '@angular/core';
 
 @Directive({
-  selector: '[appHighlights]',
+  selector: '[appHighlight]'
 })
-export class HighlightQuoteDirective {
-  @Input() appHighlightQuote: Boolean = false;
+export class HighlightDirective {
 
-  constructor(public el: ElementRef) {}
-  ngAfterViewInit() {
-    this.highlight();
-  }
+  constructor(private elem:ElementRef) {
+    elem.nativeElement.style.backgroundColor = "yellow"
+    elem.nativeElement.style.backgroundColor="blue"
 
-  ngOnChanges() {
-    this.highlight();
-  }
-  private highlight() {
-    const highlightRibbon = this.el.nativeElement.querySelector('.highlight');
-    if (!!highlightRibbon) {
-      this.appHighlightQuote
-        ? (highlightRibbon.style.display = 'block')
-        : (highlightRibbon.style.display = 'none');
-    }
-  }
+   }
+  
+
 }

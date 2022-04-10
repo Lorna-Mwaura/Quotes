@@ -16,8 +16,7 @@ export class QuoteComponent implements OnInit {
  
 
   quotes = [
-    // new Quote(0,'','','',new Date()),
-    new Quote(3, 'I have to pray before I come to school','Daudi Mohamed', 'Farah', new Date(2019, 0, 15)),
+    new Quote(3, 'Your Journey begins with  a choice to get up,step out and live fully','Oprah Winfrey', 'Network', new Date(2022, 4, 10 )),
 ]
 
 quoteDelete(complete:boolean){

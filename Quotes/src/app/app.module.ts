@@ -8,6 +8,7 @@ import { MediaComponent } from './media/media.component';
 import { HomeComponent } from './home/home.component';
 import { QuoteComponent } from './quote/quote.component';
 import { HighlightsDirective } from './highlights.directive';
+import { TimeElaspedPipe } from './time-elasped.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightsDirective } from './highlights.directive';
     MediaComponent,
     HomeComponent,
     QuoteComponent,
-    HighlightsDirective
+    HighlightsDirective,
+    TimeElaspedPipe
   ],
   imports: [
     BrowserModule,

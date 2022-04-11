@@ -1,14 +1,13 @@
-<div class="home bg-info text-dark">
-  <h1 class="mt-5 text-center">My Qoutes</h1>
-  <p class="mt-5 text-center"><em><strong>"Motivation,Inspiration,Success"</strong></em></p>
+<app-nav-bar></app-nav-bar>
+<p class="mt-2 text-center"><em><strong>"Motivation,Inspiration,Success"</strong></em></p>
 
+<div class="home bg-info text-dark m-5 p-2">
   <div class="row justify-content-start">
     <div class = "col-md-4">
       <app-background></app-background>
     </div>
       <div class="col-md-4">
         <h2>My Quotes</h2>
-
         <ul *ngFor='let quote of quotes; let i = index'>
           <div *ngIf="quote.upvotes == highest && quote.upvotes>0; then highlight else empty"></div>
           <ng-template #highlight>

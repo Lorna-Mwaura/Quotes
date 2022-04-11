@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h2 class="text-center">Create a new Quote</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()'#form="ngForm">
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'required>
+   <div [hidden]= "author.valid || author.pristine" class="alert alert-danger">
+            <p>Author is required</p>
+  </div>
+  </div>
+  <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input type="text"  class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
+            <div [hidden]= "publisher.valid || publisher.pristine" class="alert alert-danger">
+                <p>Publisher is required</p>
+            </div>
+            </div>
+        <div class="form-group">
+  
+            <label for="quote">Quote</label>
+            <input type="text" class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>Qoute is required</p>
+            </div>
+        </div>
+        <div class="form-group mt-4 text-center">
+            <button class="btn btn-primary px-4 py-2">
+                Save
+            </button>
+        </div>  
+    </form>
+  </div>

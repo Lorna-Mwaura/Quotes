@@ -1,0 +1,29 @@
+<div class="home">
+  <h1 class="mt-5 text-center">My Qoutes</h1>
+  <p class="mt-5 text-center"><em><strong>"Motivation,Inspiration,Success"</strong></em></p>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-md-6">
+        <h2>My Quotes</h2>
+
+        <ul *ngFor='let quote of quotes'>
+          <div *ngIf="quote.upvotes == highest && quote.upvotes>0; then highlight else empty"></div>
+          <ng-template #highlight>
+            <li appHighlight>{{quote.quote}} <br>
+              <span><strong>Author:</strong>{{quote.author}}</span><br><span><strong>Publisher:</strong>{{quote.publisher}}</span><br><span><strong>Upvote:</strong>{{quote.upvotes}}</span><br><span><strong>Downvotes:</strong>{{quote.downvotes}}</span>
+            </li>
+
+          </ng-template>
+          <ng-template #empty>
+            <li>{{quote.quote}} <br>
+              <span><strong>Author:</strong>{{quote.author}}</span><br><span><strong>Publisher:</strong>{{quote.publisher}}</span><br><span><strong>Upvote:</strong>{{quote.upvotes}}</span><br><span><strong>Downvotes:</strong>{{quote.downvotes}}</span>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <app-form (addQuote)="addNewQuote ($event)"></app-form>
+      </div>
+    </div>
+  </div>
+</div>

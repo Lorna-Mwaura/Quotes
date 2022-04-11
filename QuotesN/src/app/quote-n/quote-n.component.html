@@ -16,9 +16,15 @@
           </ng-template>
           <ng-template #empty>
             <li>{{quote.quote}} <br>
-              <span><strong>Author:</strong>{{quote.author}}</span><br><span><strong>Publisher:</strong>{{quote.publisher}}</span><br><span><strong>Upvote:</strong>{{quote.upvotes}}</span><br><span><strong>Downvotes:</strong>{{quote.downvotes}}</span>
+              <span><strong>Author:</strong>{{quote.author}}</span><br><span><strong>Publisher:</strong>{{quote.publisher}}</span><br>
+              <button class="like btn" click="upvotes()">
+                  <i class="fa fa-thumbs-up"></i>{{quote.upvotes}}
+                  </button>
+              <button>Downvotes</button>{{quote.downvotes}}
             </li>
+
           </ng-template>
+
         </ul>
       </div>
       <div class="col-md-6">

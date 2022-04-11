@@ -8,6 +8,8 @@ import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { TimeElapsedPipe } from './time-elapsed.pipe';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +17,13 @@ import { TimeElapsedPipe } from './time-elapsed.pipe';
     QuoteNComponent,
     HighlightDirective,
     FormComponent,
-    TimeElapsedPipe
+    TimeElapsedPipe,
+    QuoteDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
     
   ],
   providers: [],

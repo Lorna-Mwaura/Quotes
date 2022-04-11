@@ -13,7 +13,6 @@ quotes:Quote[] = [
 
 ];
 addNewQuote(quote: Quote) {
-  
   quote.author = ""
   quote.publisher =""
   quote.quote=""

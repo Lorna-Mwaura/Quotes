@@ -24,6 +24,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    // TimeElapsedPipe
     
   ],
   providers: [],

@@ -1,8 +1,11 @@
 <div class="home">
   <h1 class="mt-5 text-center">My Qoutes</h1>
   <p class="mt-5 text-center"><em><strong>"Motivation,Inspiration,Success"</strong></em></p>
-  <!-- <div class="container"> -->
-    <div class="row justify-content-start">
+
+  <div class="row justify-content-start">
+    <div class = "col-md-4">
+      <app-background></app-background>
+    </div>
       <div class="col-md-4">
         <h2>My Quotes</h2>
 
@@ -19,9 +22,7 @@
           <ng-template #empty>
             <li>{{quote.quote}} <br>
               <span><strong>Author:</strong>{{quote.author}}</span><br><span><strong>Publisher:</strong>{{quote.publisher}}</span><br>
-              <button class="like btn" click="upvotes()">
-                  <i class="fa fa-thumbs-up"></i>{{quote.upvotes}}
-                  </button>
+              <button>Upvotes</button>{{quote.upvotes}}
               <button>Downvotes</button>{{quote.downvotes}}
             </li>
 

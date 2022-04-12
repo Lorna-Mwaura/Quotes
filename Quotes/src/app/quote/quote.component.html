@@ -1,0 +1,11 @@
+<ul *ngFor = 'let quote of quotes'>
+<li>
+    {{ quote.quote }} <br> 
+    <span><strong>Author:</strong> {{ quote.author }}</span> <br>
+    <span><strong>Publisher:</strong> {{ quote.publisher }}</span> <br>
+
+    <button>Upvotes</button>{{ quote.upvotes }}
+    <button>Downvotes</button> {{ quote.downvotes }}
+
+</li>
+</ul>

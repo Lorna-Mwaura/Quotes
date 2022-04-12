@@ -17,6 +17,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,NavBarComponent]
 })
 export class AppModule { }
